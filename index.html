@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nice to Know Studio</title>
+  <meta name="description" content="Personal script-building studio for the Nice to Know Reels channel.">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="NTK Studio">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23fff'%3ENTK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash.
+    try {
+      var s = JSON.parse(localStorage.getItem('ntkStudio.v1') || '{}');
+      var t = s.settings && s.settings.theme;
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/inbox" aria-label="Nice to Know Studio home">
+      <span class="brand-mark">NTK</span>
+      <span class="brand-text"><strong>Nice to Know</strong> Studio</span>
+    </a>
+    <span id="save-status" class="save-status" aria-live="polite"></span>
+    <nav class="nav" aria-label="Main">
+      <a href="#/inbox" data-nav="inbox">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M5 5h14l1 8v6H4v-6z"/></svg>
+        <span>Inbox</span>
+      </a>
+      <a href="#/scripts" data-nav="scripts">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg>
+        <span>Scripts</span>
+      </a>
+      <a href="#/hooks" data-nav="hooks">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9a4 4 0 1 1-4-4M12 3l3 3"/></svg>
+        <span>Hook Bank</span>
+      </a>
+      <a href="#/settings" data-nav="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <div id="modal-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <div id="prompter" class="prompter" hidden>
+    <div class="prompter-bar">
+      <button type="button" class="pbtn pbtn-play" data-p="toggle">Start</button>
+      <div class="pgroup" aria-label="Scroll speed">
+        <button type="button" class="pbtn" data-p="slower" aria-label="Slower">−</button>
+        <span class="pval"><small>Speed</small><b id="p-speed">40</b></span>
+        <button type="button" class="pbtn" data-p="faster" aria-label="Faster">+</button>
+      </div>
+      <div class="pgroup" aria-label="Font size">
+        <button type="button" class="pbtn" data-p="smaller" aria-label="Smaller text">A−</button>
+        <span class="pval"><small>Size</small><b id="p-size">44</b></span>
+        <button type="button" class="pbtn" data-p="bigger" aria-label="Bigger text">A+</button>
+      </div>
+      <button type="button" class="pbtn" data-p="mirror" aria-pressed="false">Mirror</button>
+      <button type="button" class="pbtn" data-p="restart">Restart</button>
+      <button type="button" class="pbtn pbtn-close" data-p="close" aria-label="Close teleprompter">✕</button>
+    </div>
+    <div class="prompter-scroll" id="prompter-scroll">
+      <div class="prompter-text" id="prompter-text"></div>
+    </div>
+    <div class="prompter-guide" aria-hidden="true"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
