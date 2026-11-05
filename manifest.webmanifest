@@ -1,0 +1,16 @@
+{
+  "name": "Nice to Know Studio",
+  "short_name": "NTK Studio",
+  "description": "Plan, write, time and fact-check short videos about Philippine laws, government and adulting.",
+  "start_url": "./#/inbox",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f5",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
