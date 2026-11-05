@@ -135,31 +135,32 @@
     return {
       ideas: [{
         id: uid(),
-        title: 'Free government IDs & clearances for first-time jobseekers',
-        angle: 'RA 11261 lets fresh grads get their pre-employment documents without paying fees — once.',
+        title: 'Free pre-employment documents for first-time jobseekers',
+        angle: 'RA 11261 lets fresh grads get government pre-employment documents for free — once.',
         sourceType: 'law',
-        notes: 'Audience keeps asking how much NBI + police clearance costs. Good evergreen topic for graduation season (March–June). Mention the barangay certification step — that is where people get stuck.\n\n(SAMPLE — please re-check everything against the law and the agencies before posting.)',
+        notes: 'Laging tinatanong sa comments kung magkano ang NBI at police clearance. Evergreen topic, lalo na tuwing graduation season. Emphasize the barangay certification step — dito madalas naiipit ang mga tao.\n\nSAMPLE ONLY — the claims marked unverified in the Fact-check tab still need checking against the law and the agencies before posting.',
         status: 'Scripted',
         createdAt: t,
         updatedAt: t,
         script: {
-          hook: 'Fresh grad ka ba? You might not have to pay for your NBI clearance at all.',
-          body: 'There is a law called the First Time Jobseekers Assistance Act, or Republic Act 11261.\n\n[Text overlay: RA 11261]\n\nIf you are applying for your very first job, government agencies cannot charge you fees for pre-employment documents like your NBI clearance, police clearance, barangay clearance, and PSA birth certificate.\n\nFirst, go to your barangay and ask for a Barangay Certification that you are a first-time jobseeker. You need to have lived in that barangay for at least six months.\n\nThen bring that certification when you apply for your documents.\n\nTwo catches: you can only use this once, and it does not cover passports or documents from private offices.',
-          cta: 'Save this for your job hunt, and send it to a friend who just graduated. Follow for more nice-to-know adulting tips!',
-          caption: 'Fresh grad? Huwag munang magbayad! 🎓\n\nUnder RA 11261 (First Time Jobseekers Assistance Act), first-time jobseekers can get pre-employment documents like NBI clearance, police clearance, barangay clearance and PSA birth certificate for free — one time only.\n\nStep 1: Get a Barangay Certification as a first-time jobseeker.\nStep 2: Present it when you apply for your documents.\n\nSave this and share with a fresh grad! 💛',
+          hook: 'Fresh grad ka ba? Baka hindi mo na kailangang magbayad para sa NBI clearance mo.',
+          body: "May batas para dito: ang First Time Jobseekers Assistance Act, o Republic Act 11261.\n\n[Text overlay: RA 11261]\n\nIf you're applying for your very first job, government offices can't charge you fees for pre-employment documents — like your NBI clearance, police clearance, barangay clearance, and PSA birth certificate.\n\nStep one: pumunta ka sa barangay mo and ask for a Barangay Certification na first-time jobseeker ka. Dapat at least six months ka nang nakatira doon.\n\nStep two: dalhin mo 'yung certification kapag kukuha ka na ng documents.\n\nPero tandaan: isang beses lang 'to per document, at one year lang ang validity ng certification.",
+          cta: "I-save mo 'to para sa job hunt mo, at i-share sa kaibigan mong bagong graduate. Follow for more nice-to-know adulting tips!",
+          caption: "Fresh grad? Teka, 'wag ka munang magbayad! 🎓\n\nUnder RA 11261 (First Time Jobseekers Assistance Act), libre ang pre-employment documents mula sa government offices para sa first-time jobseekers — like NBI clearance, police clearance, barangay clearance at PSA birth certificate.\n\nStep 1: Kumuha ng Barangay Certification as a first-time jobseeker.\nStep 2: Ipakita ito kapag kukuha ka na ng documents.\n\nIsang beses lang 'to per document, kaya sulitin mo! I-save at i-share sa mga fresh grad 💛",
           hashtags: '#NiceToKnow #RA11261 #FirstTimeJobseeker #FreshGrad #AdultingPH #PhilippineLaw',
           target: 60,
           claims: [
             { id: uid(), claim: 'RA 11261 is the First Time Jobseekers Assistance Act.', source: 'Republic Act No. 11261', link: 'https://lawphil.net/statutes/repacts/ra2019/ra_11261_2019.html', verified: true },
-            { id: uid(), claim: 'Government agencies cannot collect fees for pre-employment documents of first-time jobseekers.', source: 'RA 11261, Sec. 4', link: 'https://lawphil.net/statutes/repacts/ra2019/ra_11261_2019.html', verified: true },
-            { id: uid(), claim: 'You must have lived in the barangay for at least six months to get the certification.', source: 'RA 11261 Implementing Rules (IRR)', link: '', verified: false },
-            { id: uid(), claim: 'Passports are not covered by the fee waiver.', source: 'DFA / RA 11261 IRR', link: '', verified: false }
+            { id: uid(), claim: 'First-time jobseekers do not pay government fees for pre-employment documents such as NBI clearance, police clearance, barangay clearance and PSA birth certificate.', source: 'Republic Act No. 11261', link: 'https://lawphil.net/statutes/repacts/ra2019/ra_11261_2019.html', verified: false },
+            { id: uid(), claim: 'You must have lived in the barangay for at least six months to get the first-time jobseeker Barangay Certification.', source: 'RA 11261 Implementing Rules (IRR) / DILG', link: '', verified: false },
+            { id: uid(), claim: 'The free availment can be used only once per document.', source: 'Republic Act No. 11261', link: '', verified: false },
+            { id: uid(), claim: 'The Barangay Certification is valid for one year from the date it is issued.', source: 'RA 11261 Implementing Rules (IRR)', link: '', verified: false }
           ],
           shots: [
             { id: uid(), desc: 'Hook to camera, holding an NBI clearance printout', type: 'talking', done: true },
             { id: uid(), desc: '"RA 11261" title card', type: 'text', done: true },
             { id: uid(), desc: 'List of covered documents (NBI, police, barangay, PSA…)', type: 'text', done: false },
-            { id: uid(), desc: 'Walking into barangay hall / generic barangay exterior', type: 'broll', done: false },
+            { id: uid(), desc: 'Walking into the barangay hall (or a generic barangay hall exterior)', type: 'broll', done: false },
             { id: uid(), desc: 'NBI Clearance website showing the application page', type: 'screen', done: false },
             { id: uid(), desc: 'CTA to camera', type: 'talking', done: false }
           ],
@@ -167,18 +168,24 @@
         }
       }],
       hooks: [
-        { id: uid(), text: 'Fresh grad ka ba? You might not have to pay for your NBI clearance at all.', tags: ['question', 'did you know'], createdAt: t },
-        { id: uid(), text: 'Akala mo kailangan mong magbayad para dito? Hindi pala.', tags: ['myth-buster'], createdAt: t },
-        { id: uid(), text: 'Did you know there is a law that protects you from this?', tags: ['did you know', 'question'], createdAt: t }
+        { id: uid(), text: 'Fresh grad ka ba? Baka hindi mo na kailangang magbayad para sa NBI clearance mo.', tags: ['question', 'did you know'], createdAt: t },
+        { id: uid(), text: "Akala mo may bayad 'to? Libre pala!", tags: ['myth-buster'], createdAt: t },
+        { id: uid(), text: "Alam mo bang may batas na nagpoprotekta sa'yo dito?", tags: ['did you know', 'question'], createdAt: t }
       ]
     };
   }
 
+  let loadWarning = '';
   function load() {
     let raw = null;
     try { raw = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage blocked */ }
     if (!raw) return normalize(sampleData());
-    try { return normalize(JSON.parse(raw)); } catch (e) { return normalize(sampleData()); }
+    try { return normalize(JSON.parse(raw)); } catch (e) {
+      // Never silently overwrite damaged data: park a copy so it can be recovered.
+      try { localStorage.setItem(`${STORAGE_KEY}.damaged-${Date.now()}`, raw); } catch (err) { /* ignore */ }
+      loadWarning = 'Your saved data could not be read, so a copy was set aside. Import your latest backup in Settings.';
+      return normalize({});
+    }
   }
 
   let state = load();
@@ -286,32 +293,54 @@
   }
 
   // ---------- Modal ----------
-  let modalCleanup = null;
-  function openModal(title, bodyHTML, onMount) {
-    closeModal();
+  let modalReturnFocus = null;
+  const isDesktop = () => window.matchMedia('(min-width: 761px)').matches;
+  const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  function openModal(title, bodyHTML) {
+    const returnTo = $('#modal-root').firstChild ? modalReturnFocus : document.activeElement;
+    closeModal(true);
+    modalReturnFocus = returnTo;
     const root = $('#modal-root');
     root.innerHTML = `
       <div class="modal-backdrop" data-modal-backdrop>
-        <div class="modal" role="dialog" aria-modal="true" aria-label="${esc(title)}">
-          <div class="modal-head"><h2>${esc(title)}</h2><button type="button" class="icon-btn" data-action="close-modal" aria-label="Close">✕</button></div>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+          <div class="modal-head"><h2 id="modal-title">${esc(title)}</h2><button type="button" class="icon-btn" data-action="close-modal" aria-label="Close">✕</button></div>
           ${bodyHTML}
         </div>
       </div>`;
+    // On desktop jump straight into the first field; on phones focus the dialog so the keyboard doesn't pop up.
     const first = $('input, textarea, select', root);
-    if (first && window.matchMedia('(min-width: 761px)').matches) first.focus();
-    if (onMount) modalCleanup = onMount(root) || null;
+    if (first && isDesktop()) first.focus();
+    else $('.modal', root).focus();
   }
-  function closeModal() {
-    if (typeof modalCleanup === 'function') modalCleanup();
-    modalCleanup = null;
-    $('#modal-root').innerHTML = '';
+  function closeModal(keepFocus) {
+    const root = $('#modal-root');
+    const wasOpen = !!root.firstChild;
+    root.innerHTML = '';
+    if (wasOpen && !keepFocus && modalReturnFocus && document.contains(modalReturnFocus)) modalReturnFocus.focus();
+    if (!keepFocus) modalReturnFocus = null;
+  }
+  /** Keep Tab / Shift+Tab inside an open dialog. */
+  function trapTab(e, container) {
+    const items = $$(FOCUSABLE, container).filter((el) => el.offsetParent !== null || el === document.activeElement);
+    if (!items.length) { e.preventDefault(); return; }
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (e.shiftKey && (document.activeElement === first || !container.contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && (document.activeElement === last || !container.contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+  }
+  /** Mirror the visual "active" state of toggle buttons for screen readers. */
+  function syncPressed() {
+    $$('.seg button, .chip[data-action="set-filter"], .chip[data-action="hook-filter"]').forEach((b) => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
   }
 
   // ---------- Router ----------
   function route() {
     const h = location.hash.replace(/^#\/?/, '');
     const [page, id] = h.split('/');
-    return { page: page || 'inbox', id: id ? decodeURIComponent(id) : '' };
+    const known = ['inbox', 'scripts', 'script', 'hooks', 'settings'];
+    return { page: known.includes(page) ? page : 'inbox', id: id ? decodeURIComponent(id) : '' };
   }
   function go(hash) {
     if (location.hash === hash) render();
@@ -322,8 +351,13 @@
     const r = route();
     const app = $('#app');
     const navKey = r.page === 'script' ? 'scripts' : r.page;
-    $$('[data-nav]').forEach((a) => a.classList.toggle('active', a.dataset.nav === navKey));
-    closeModal();
+    $$('[data-nav]').forEach((a) => {
+      const on = a.dataset.nav === navKey;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    closeModal(true);
+    let pageTitle = ({ inbox: 'Inbox', scripts: 'Scripts', script: 'Script', hooks: 'Hook Bank', settings: 'Settings' }[r.page] || 'Inbox');
     switch (r.page) {
       case 'scripts': app.innerHTML = renderScripts(); break;
       case 'script': {
@@ -333,13 +367,15 @@
         if (ui.lastScriptId !== idea.id) { ui.scriptTab = 'write'; ui.lastScriptId = idea.id; }
         app.innerHTML = renderEditor(idea);
         updateTimer(idea);
+        pageTitle = idea.title;
         break;
       }
       case 'hooks': app.innerHTML = renderHooks(); break;
       case 'settings': app.innerHTML = renderSettings(); break;
       default: app.innerHTML = renderInbox(); renderIdeaResults();
     }
-    document.title = ({ inbox: 'Inbox', scripts: 'Scripts', script: 'Script', hooks: 'Hook Bank', settings: 'Settings' }[r.page] || 'Inbox') + ' · Nice to Know Studio';
+    document.title = `${pageTitle} · Nice to Know Studio`;
+    syncPressed();
   }
 
   // ======================================================================
@@ -357,7 +393,7 @@
     return `
       <section>
         <div class="page-head">
-          <div><h1>Idea Inbox</h1><p class="muted small">${state.ideas.length} idea${state.ideas.length === 1 ? '' : 's'} · tap a card to edit</p></div>
+          <div><h1>Idea Inbox</h1><p class="muted small" id="idea-count">${ideaCountText()}</p></div>
         </div>
         <details class="card quick-add" ${!state.ideas.length || window.matchMedia('(min-width: 761px)').matches ? 'open' : ''}>
           <summary>Quick-add an idea</summary>
@@ -386,6 +422,11 @@
       </section>`;
   }
 
+  function ideaCountText() {
+    const n = state.ideas.length;
+    return `${n} idea${n === 1 ? '' : 's'}${n ? ' · tap a card to edit' : ''}`;
+  }
+
   function filteredIdeas(ignoreStatus) {
     const q = ui.search.trim().toLowerCase();
     return state.ideas
@@ -404,13 +445,13 @@
     return `
       <article class="idea-card status-${i.status}" data-action="edit-idea" data-id="${i.id}">
         <div>
-          <h3>${esc(i.title)}</h3>
+          <h3><button type="button" class="card-title-btn" data-action="edit-idea" data-id="${i.id}">${esc(i.title)}</button></h3>
           ${i.angle ? `<p class="angle">${esc(i.angle)}</p>` : ''}
           <div class="meta">${badges.join('')}</div>
         </div>
         <div class="actions">
-          <select class="select-sm" data-idea-status="${i.id}" aria-label="Status">${statusOptions(i.status)}</select>
-          <button type="button" class="btn btn-sm" data-action="open-script" data-id="${i.id}">${i.script ? 'Script' : '+ Script'}</button>
+          <select class="select-sm" data-idea-status="${i.id}" aria-label="Status of ${esc(i.title)}">${statusOptions(i.status)}</select>
+          <button type="button" class="btn btn-sm" data-action="open-script" data-id="${i.id}" aria-label="${i.script ? 'Open' : 'Start'} script: ${esc(i.title)}">${i.script ? 'Script' : '+ Script'}</button>
         </div>
       </article>`;
   }
@@ -418,6 +459,9 @@
   function renderIdeaResults() {
     const box = $('#idea-results');
     if (!box) return;
+    setTimeout(syncPressed);
+    const cnt = $('#idea-count');
+    if (cnt) cnt.textContent = ideaCountText();
     const all = filteredIdeas(true);
     const chips = $('#status-chips');
     chips.innerHTML = [['all', 'All', all.length], ...STATUSES.map((s) => [s, s, all.filter((i) => i.status === s).length])]
@@ -430,15 +474,15 @@
     }
     if (state.settings.inboxView === 'list') {
       box.innerHTML = list.length
-        ? `<div class="list">${list.map(ideaCard).join('')}</div>`
+        ? `<h2 class="sr-only">Ideas</h2><div class="list">${list.map(ideaCard).join('')}</div>`
         : `<div class="empty"><strong>No matches</strong>Try another search or filter.</div>`;
       return;
     }
     const cols = ui.statusFilter === 'all' ? STATUSES : [ui.statusFilter];
-    box.innerHTML = `<div class="board ${cols.length === 1 ? 'single' : ''}">${cols.map((s) => {
+    box.innerHTML = `${cols.length > 1 ? '<p class="board-hint">Swipe sideways to see every stage →</p>' : ''}<div class="board ${cols.length === 1 ? 'single' : ''}">${cols.map((s) => {
       const items = list.filter((i) => i.status === s);
       return `<div class="board-col status-${s}">
-        <div class="board-col-head"><span class="dot"></span>${s}<span class="count">${items.length}</span></div>
+        <h2 class="board-col-head"><span class="dot" aria-hidden="true"></span>${s}<span class="count"><span class="sr-only">: </span>${items.length}<span class="sr-only"> ideas</span></span></h2>
         ${items.length ? items.map(ideaCard).join('') : `<div class="col-empty">Nothing here</div>`}
       </div>`;
     }).join('')}</div>`;
@@ -533,6 +577,7 @@
     ];
     return `
       <section data-editor="${idea.id}">
+        <h1 class="sr-only">Script: ${esc(idea.title)}</h1>
         <div class="editor-head">
           <a class="back-link" href="#/scripts">← All scripts</a>
           <div class="row">
@@ -560,10 +605,10 @@
           <div class="timer-bar" id="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
           <div class="timer-over-msg" id="timer-over" hidden></div>
         </div>
-        <div class="tabs" role="tablist">
-          ${tabs.map(([k, l]) => `<button type="button" role="tab" class="tab ${tab === k ? 'active' : ''}" aria-selected="${tab === k}" data-action="tab" data-tab="${k}">${l}</button>`).join('')}
+        <div class="tabs" role="tablist" aria-label="Script sections">
+          ${tabs.map(([k, l]) => `<button type="button" role="tab" id="tab-${k}" aria-controls="tab-body" class="tab ${tab === k ? 'active' : ''}" aria-selected="${tab === k}" tabindex="${tab === k ? 0 : -1}" data-action="tab" data-tab="${k}">${l}</button>`).join('')}
         </div>
-        <div id="tab-body">${renderTab(idea)}</div>
+        <div id="tab-body" role="tabpanel" aria-labelledby="tab-${tab}">${renderTab(idea)}</div>
       </section>`;
   }
 
@@ -588,7 +633,7 @@
     return SECTIONS.map((sec) => `
       <div class="section">
         <div class="section-head">
-          <h3><label for="f-${sec.key}">${sec.label}</label></h3>
+          <h2><label for="f-${sec.key}">${sec.label}</label></h2>
           ${sec.spoken ? '<span class="spoken">spoken</span>' : ''}
           <span class="counter" data-counter="${sec.key}">${sectionCounter(sec.key, s[sec.key])}</span>
         </div>
@@ -608,7 +653,7 @@
     timer.classList.remove('ok', 'near', 'over');
     timer.classList.add(st.level);
     $('#timer-time').textContent = fmtTime(st.seconds);
-    $('#timer-sub').innerHTML = `<b>${st.words}</b> spoken words<br>@ ${state.settings.wpm} wpm · target <b>${st.target}s</b>`;
+    $('#timer-sub').innerHTML = `<b>${st.words}</b> spoken words<br><span class="wide-only">@ ${state.settings.wpm} wpm · </span>target <b>${st.target}s</b>`;
     const scale = Math.max(100, st.target * 1.15, st.seconds * 1.08);
     const bar = $('#timer-bar');
     $$('.timer-mark', bar).forEach((m) => m.remove());
@@ -722,7 +767,7 @@
               <span class="count ${over ? 'over' : ''}">${len.toLocaleString()} / ${limit.toLocaleString()}${over ? ` · ${(len - limit).toLocaleString()} over` : ''}</span>
               <button type="button" class="btn btn-sm" data-action="copy-platform" data-platform="${p.key}">Copy</button>
             </div>
-            <pre class="platform-preview">${text ? esc(text) : '<span class="muted">Write a caption in the Write tab first.</span>'}</pre>
+            <pre class="platform-preview" tabindex="0" aria-label="${p.name} caption preview">${text ? esc(text) : '<span class="muted">Write a caption in the Write tab first.</span>'}</pre>
             <div class="meter ${over ? 'over' : ''}"><div style="width:${Math.min(100, (len / limit) * 100)}%"></div></div>
           </div>`;
       }).join('')}`;
@@ -985,8 +1030,10 @@
       .map(([n, t]) => `<span class="sec">${n}</span>${fmt(t)}`).join('\n') || '<span class="note">Nothing to read yet — write your Hook, Body and CTA first.</span>';
   }
 
+  let prompterReturnFocus = null;
   function openPrompter(idea) {
     const el = $('#prompter');
+    prompterReturnFocus = document.activeElement;
     const p = state.settings.prompter;
     prompter.idea = idea;
     $('#prompter-text').innerHTML = prompterHTML(idea.script);
@@ -1000,6 +1047,7 @@
     setPlaying(false);
     if (el.requestFullscreen) el.requestFullscreen().catch(() => {});
     $('[data-p="mirror"]').setAttribute('aria-pressed', String(p.mirror));
+    $('.pbtn-play').focus();
   }
   /** Put the first line on the reading guide (30% down the text area). */
   function alignPrompterGuide() {
@@ -1015,7 +1063,12 @@
     setPlaying(false);
     $('#prompter').hidden = true;
     document.body.style.overflow = '';
-    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    const returnTo = prompterReturnFocus;
+    prompterReturnFocus = null;
+    // Focus can only move back to the page once full screen has actually ended.
+    const restore = () => { if (returnTo && document.contains(returnTo)) returnTo.focus(); };
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().then(restore, restore);
+    else restore();
   }
   function applyPrompterSettings() {
     const p = state.settings.prompter;
@@ -1086,7 +1139,8 @@
       renderIdeaResults();
     },
     'edit-idea': (el, e) => {
-      if (e.target.closest('select, button, a, input')) return;
+      // The whole card is a mouse/touch target; the title button is the keyboard target.
+      if (el.tagName === 'ARTICLE' && e.target.closest('select, button, a, input')) return;
       const idea = getIdea(el.dataset.id);
       if (idea) ideaModal(idea);
     },
@@ -1128,8 +1182,14 @@
       const idea = currentEditorIdea();
       if (!idea) return;
       ui.scriptTab = el.dataset.tab;
-      $$('.tab').forEach((t) => { const on = t.dataset.tab === ui.scriptTab; t.classList.toggle('active', on); t.setAttribute('aria-selected', on); });
+      $$('.tab').forEach((t) => {
+        const on = t.dataset.tab === ui.scriptTab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
       $('#tab-body').innerHTML = renderTab(idea);
+      $('#tab-body').setAttribute('aria-labelledby', `tab-${ui.scriptTab}`);
       updateWarnings(idea);
       if (el.closest('#warn-banner')) $('.tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
     },
@@ -1278,6 +1338,8 @@
   };
 
   document.addEventListener('click', (e) => {
+    // Skip link: move focus without touching the URL (the URL drives the page router).
+    if (e.target.closest('.skip-link')) { e.preventDefault(); $('#app').focus(); return; }
     const p = e.target.closest('[data-p]');
     if (p) { prompterAction(p.dataset.p); return; }
     if (e.target.id === 'prompter-text' || e.target.closest('#prompter-text')) { setPlaying(!prompter.playing); return; }
@@ -1285,7 +1347,7 @@
     const el = e.target.closest('[data-action]');
     if (!el) return;
     const fn = actions[el.dataset.action];
-    if (fn) fn(el, e);
+    if (fn) { fn(el, e); syncPressed(); }
   });
 
   document.addEventListener('submit', (e) => {
@@ -1303,7 +1365,7 @@
         form.reset();
         toast('Idea added ✓');
         renderIdeaResults();
-        $('[name="title"]', form).focus();
+        if (isDesktop()) $('[name="title"]', form).focus();
         break;
       }
       case 'edit-idea': {
@@ -1432,6 +1494,16 @@
       return;
     }
     if (t.id === 'import-file') { importBackup(t.files && t.files[0]); t.value = ''; return; }
+    if (t.dataset.setting === 'wpm') {
+      if (Math.round(Number(t.value)) !== state.settings.wpm) toast('Speaking speed must be between 60 and 400 words per minute');
+      t.value = state.settings.wpm;
+      return;
+    }
+    if (t.dataset.limit) {
+      if (Math.round(Number(t.value)) !== state.settings.limits[t.dataset.limit]) toast('Limits must be a whole number above 0');
+      t.value = state.settings.limits[t.dataset.limit];
+      return;
+    }
     const idea = currentEditorIdea();
     if (!idea) return;
     if (t.dataset.ifield === 'status') { idea.status = t.value; touch(idea); save(); return; }
@@ -1463,14 +1535,35 @@
   });
 
   document.addEventListener('keydown', (e) => {
-    if (!$('#prompter').hidden) {
-      if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); setPlaying(!prompter.playing); }
+    const pr = $('#prompter');
+    if (!pr.hidden) {
+      const onButton = e.target.closest && e.target.closest('button');
+      if (e.key === 'Tab') trapTab(e, pr);
+      else if ((e.key === ' ' || e.key === 'Spacebar') && !onButton) { e.preventDefault(); setPlaying(!prompter.playing); }
       else if (e.key === 'Escape') closePrompter();
       else if (e.key === 'ArrowUp') { e.preventDefault(); prompterAction('faster'); }
       else if (e.key === 'ArrowDown') { e.preventDefault(); prompterAction('slower'); }
       return;
     }
-    if (e.key === 'Escape' && $('#modal-root').firstChild) closeModal();
+    const modal = $('#modal-root .modal');
+    if (modal) {
+      if (e.key === 'Escape') closeModal();
+      else if (e.key === 'Tab') trapTab(e, modal);
+      return;
+    }
+    // Arrow keys move between the script editor tabs (standard tab-list behaviour).
+    const tab = e.target.closest && e.target.closest('[role="tab"]');
+    if (tab && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) {
+      const tabs = $$('[role="tab"]', tab.parentElement);
+      let i = tabs.indexOf(tab);
+      if (e.key === 'ArrowLeft') i = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'ArrowRight') i = (i + 1) % tabs.length;
+      else if (e.key === 'Home') i = 0;
+      else i = tabs.length - 1;
+      e.preventDefault();
+      tabs[i].click();
+      tabs[i].focus();
+    }
   });
 
   document.addEventListener('fullscreenchange', () => {
@@ -1499,4 +1592,5 @@
   try { if (!localStorage.getItem(STORAGE_KEY)) save(true); } catch (e) { /* ignore */ }
   if (!location.hash) history.replaceState(null, '', '#/inbox');
   render();
+  if (loadWarning) toast(loadWarning);
 })();

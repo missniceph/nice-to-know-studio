@@ -4,11 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Nice to Know Studio</title>
-  <meta name="description" content="Personal script-building studio for the Nice to Know Reels channel.">
+  <meta name="description" content="Plan, write, time and fact-check short videos about Philippine laws, government processes and adulting — the script studio behind @missniceph’s Nice to Know.">
   <meta name="theme-color" content="#0f766e">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://missniceph.github.io/nice-to-know-studio/">
+
+  <!-- Share preview (Facebook, Messenger, Viber, X, LinkedIn…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nice to Know Studio">
+  <meta property="og:title" content="Nice to Know Studio">
+  <meta property="og:description" content="Plan, write, time and fact-check short videos about Philippine laws, government processes and adulting.">
+  <meta property="og:url" content="https://missniceph.github.io/nice-to-know-studio/">
+  <meta property="og:image" content="https://missniceph.github.io/nice-to-know-studio/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nice to Know Studio — a script studio for short videos about Philippine laws and adulting, by @missniceph">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons & home-screen app -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="NTK Studio">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23fff'%3ENTK%3C/text%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="styles.css">
   <script>
     // Apply saved theme before first paint to avoid a flash.
@@ -18,14 +39,16 @@
       if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
   </script>
+  <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#app">Skip to content</a>
   <header class="topbar">
-    <a class="brand" href="#/inbox" aria-label="Nice to Know Studio home">
-      <span class="brand-mark">NTK</span>
-      <span class="brand-text"><strong>Nice to Know</strong> Studio</span>
+    <a class="brand" href="#/inbox" aria-label="Nice to Know Studio, go to Inbox">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f766e"/><path d="M17 47V17h8l14 19V17h8v30h-8L25 28v19z" fill="#fff"/><circle cx="51" cy="13" r="6" fill="#fbbf24"/></svg>
+      <span class="brand-text" aria-hidden="true"><strong>Nice to Know</strong> Studio</span>
     </a>
-    <span id="save-status" class="save-status" aria-live="polite"></span>
+    <span id="save-status" class="save-status" aria-hidden="true"></span>
     <nav class="nav" aria-label="Main">
       <a href="#/inbox" data-nav="inbox">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M5 5h14l1 8v6H4v-6z"/></svg>
@@ -46,34 +69,40 @@
     </nav>
   </header>
 
-  <main id="app" tabindex="-1"></main>
+  <main id="app" tabindex="-1">
+    <noscript><p class="empty">Nice to Know Studio needs JavaScript turned on in your browser.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://www.instagram.com/missniceph/" target="_blank" rel="noopener">Follow <strong>@missniceph</strong> on Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+    <span aria-hidden="true">·</span>
+    <span>Your work stays on this device. <a href="#/settings">Back it up</a>.</span>
+  </footer>
 
   <div id="modal-root"></div>
   <div id="toast" role="status" aria-live="polite"></div>
 
-  <div id="prompter" class="prompter" hidden>
+  <div id="prompter" class="prompter" role="dialog" aria-modal="true" aria-label="Teleprompter" hidden>
     <div class="prompter-bar">
       <button type="button" class="pbtn pbtn-play" data-p="toggle">Start</button>
-      <div class="pgroup" aria-label="Scroll speed">
+      <div class="pgroup" role="group" aria-label="Scroll speed">
         <button type="button" class="pbtn" data-p="slower" aria-label="Slower">−</button>
-        <span class="pval"><small>Speed</small><b id="p-speed">40</b></span>
+        <span class="pval" aria-live="polite"><small>Speed</small><b id="p-speed">40</b></span>
         <button type="button" class="pbtn" data-p="faster" aria-label="Faster">+</button>
       </div>
-      <div class="pgroup" aria-label="Font size">
+      <div class="pgroup" role="group" aria-label="Text size">
         <button type="button" class="pbtn" data-p="smaller" aria-label="Smaller text">A−</button>
-        <span class="pval"><small>Size</small><b id="p-size">44</b></span>
+        <span class="pval" aria-live="polite"><small>Size</small><b id="p-size">44</b></span>
         <button type="button" class="pbtn" data-p="bigger" aria-label="Bigger text">A+</button>
       </div>
       <button type="button" class="pbtn" data-p="mirror" aria-pressed="false">Mirror</button>
       <button type="button" class="pbtn" data-p="restart">Restart</button>
       <button type="button" class="pbtn pbtn-close" data-p="close" aria-label="Close teleprompter">✕</button>
     </div>
-    <div class="prompter-scroll" id="prompter-scroll">
+    <div class="prompter-scroll" id="prompter-scroll" tabindex="0" aria-label="Script text. Tap to start or pause.">
       <div class="prompter-text" id="prompter-text"></div>
     </div>
     <div class="prompter-guide" aria-hidden="true"></div>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

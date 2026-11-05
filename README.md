@@ -29,8 +29,31 @@ Plan ideas, write and time scripts, fact-check claims, plan shots, read from a t
 
 Just double-click `index.html` to open it in a browser. No install needed.
 
-## Files
+## What's here and how to update it
 
-- `index.html` – the page
-- `styles.css` – the look (light and dark mode)
-- `app.js` – everything the app does
+Your live app: **https://missniceph.github.io/nice-to-know-studio/**
+
+| File | What it is |
+| --- | --- |
+| `index.html` | The page itself, plus the title, description and link-preview settings |
+| `styles.css` | The look: colours, light and dark mode, phone layout |
+| `app.js` | Everything the app does, including the sample idea and the default caption limits |
+| `og-image.png` | The picture shown when you share the link (1200 × 630) |
+| `og-image.svg` | The editable source of that picture |
+| `favicon.svg`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png` | Browser-tab and home-screen icons |
+| `manifest.webmanifest` | Lets phones install it from **Add to Home Screen** |
+| `.nojekyll` | Tells GitHub Pages to serve the files as they are |
+
+**To change something:**
+
+1. On GitHub, open the file and click the ✏️ pencil icon. Make your change, then click **Commit changes** to save it to `main`.
+2. Wait 1–2 minutes and the live app updates by itself. On your phone, close and reopen the app to see it.
+3. Your saved ideas and scripts are not affected. They live in your browser, not in these files.
+
+**Common edits:**
+
+- **Caption limits.** Change them in the app under **Settings → Caption limits**; no code needed. To change the starting values for new devices, edit `DEFAULT_LIMITS` near the top of `app.js`.
+- **Speaking speed.** Change it in **Settings → Speaking speed**.
+- **Share text.** Edit the `description` and `og:` lines near the top of `index.html`.
+- **Share picture.** Edit `og-image.svg` and export it as a 1200 × 630 PNG named `og-image.png`. Facebook and Messenger don't accept SVG previews. Facebook keeps old previews for a while; paste your link into the [Sharing Debugger](https://developers.facebook.com/tools/debug/) and click **Scrape Again** to refresh it.
+- **If your link ever changes** (for example, a renamed repository or a custom domain): update the full web addresses in `index.html` (the `canonical`, `og:url` and `og:image` lines).
